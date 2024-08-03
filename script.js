@@ -1,6 +1,6 @@
 
 
-document.getElementById("alertButton").addEventListener('click', function() {
+document.getElementById("refreshButton").addEventListener('click', function() {
     document.reload()
   });
 
