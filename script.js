@@ -1,7 +1,7 @@
 
 
 document.getElementById("refreshButton").addEventListener('click', function() {
-    document.reload()
+    location.reload()
   });
 
 document.getElementById("alertButton").addEventListener('click', function() {
