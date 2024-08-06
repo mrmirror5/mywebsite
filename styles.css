@@ -1,0 +1,30 @@
+body{
+    background-color: beige;
+    font-family: "Lucida Console", "Monaco", monospace;
+    font-size: 16px;
+}
+
+
+h1{
+    text-align:center;
+    color:rgb(0, 121, 90);
+    font-size: 2em;
+}
+h2{
+    text-align:center;
+    margin:50px;
+}
+p{
+    text-align:center;
+    margin-left:10px;
+    margin-right:10px;
+    font-size: 1rem;
+}
+
+button{
+
+    background-color: coral;
+    border-radius: 5px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    margin:1px;
+}
