@@ -30,3 +30,9 @@ rightButton.addEventListener("click", function(){
   }
   body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 })
+
+
+  
+function btn_clr() {
+  
+}
