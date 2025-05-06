@@ -5,6 +5,7 @@ body{
 }
 
 
+
 h1{
     text-align:center;
     color:rgb(0, 121, 90);
@@ -19,14 +20,26 @@ h2{
 }
 
 h4{
-    text-align:center;
+    text-align:left;
+    font-size: 16px;
+    margin-bottom: 0px;
 }
 
-p{
-    text-align:center;
-    margin-left:10px;
-    margin-right:10px;
-    font-size: 1rem;
+
+
+.text-container{
+  text-align: center;
+  max-width: 1000px;
+  margin:0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 100px;
+
+}
+
+.text-container p {
+  text-align: left;
+  font-size: 16px;
 }
 
 button{
@@ -40,34 +53,34 @@ button{
 
 
 .scroll-btn {
-            background-color: rgb(90, 90, 90);
-            color: white;
-            border:5px solid rgb(255, 255, 255);
-            width: 50px;
-            height: 100px;
-            cursor: pointer;
-            align-items: center;
-            font-size: 18px;
-            position: fixed;
-            margin:15px;
-            border-radius: 10px;
-            top: 50%;
-            transform: translateY(-50%);
+    background-color: rgb(90, 90, 90);
+    color: white;
+    border:5px solid rgb(255, 255, 255);
+    width: 50px;
+    height: 100px;
+    cursor: pointer;
+    align-items: center;
+    font-size: 18px;
+    position: fixed;
+    margin:15px;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 
-        }
-        .scroll-btn:hover{
-            background-color: rgb(56, 56, 56);
-        }
-        .scroll-btn:active{
-            background-color: rgb(32, 32, 32);
-        }
-        .scroll-btn.left {
-            left: 0;  /* Align to the left edge of the viewport */
-        }
+}
+.scroll-btn:hover{
+    background-color: rgb(56, 56, 56);
+}
+.scroll-btn:active{
+    background-color: rgb(32, 32, 32);
+}
+.scroll-btn.left {
+    left: 0;  /* Align to the left edge of the viewport */
+}
 
-        .scroll-btn.right {
-            right: 0;  /* Align to the right edge of the viewport */
-        }
+.scroll-btn.right {
+    right: 0;  /* Align to the right edge of the viewport */
+}
 
 
 /* The header css 
@@ -115,8 +128,7 @@ button{
   float: right;
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other 
   .header a {
     float: none;
     display: block;
@@ -126,3 +138,4 @@ button{
     float: none;
   }
 }
+  */
