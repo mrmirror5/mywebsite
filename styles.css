@@ -19,10 +19,34 @@ h2{
     margin:50px;
 }
 
+
 h4{
-    text-align:left;
+
     font-size: 16px;
     margin-bottom: 0px;
+}
+
+h5{
+
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.text-title-container{
+  display: flex;
+  justify-content: space-between;
+  padding-right:10px;
+  align-items:center;
+}
+
+.text-header{
+  display: inline-block;
+  text-align: left;
+}
+
+.text-date{
+  display: inline-block;
+  text-align: right;
 }
 
 
