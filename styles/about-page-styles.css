@@ -1,0 +1,55 @@
+body{
+  margin: 8px;
+}
+ /* 
+ Sign up form..-
+ */ 
+
+
+input{
+    border-width:3px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom:15px;
+    width: 150px;
+    
+    margin-bottom: 5px;
+}
+
+.email-input{
+    display: block;
+    width: 330px;
+}
+.sign-up-button{
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-right: 154px;
+    padding-left: 154px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(111, 168, 255);
+    transition:0.15;
+}
+
+.sign-up-button:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+.sign-up-button:active {
+    cursor: grab;
+    background-color: rgb(88, 135, 206);
+}
+
+.sign-up-text{
+    font-weight: bold;
+    color:white;
+}
+
+.sign-up-form{
+  margin-top:50px ;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;            
+}
