@@ -2,23 +2,49 @@ body{
     margin: 0px;
   }
   
-  a{
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  }
 
   /* The header css 
   /* Style the header with a grey background and some padding */
-  .header {
-    position: sticky;
+  
+  
+  .header-container{
+    display: flex;
+    justify-content: center;
+
+
+    position: fixed;
+    left: 0;
+    right: 0;
     top: 0;
+    border-bottom: 1px rgb(94, 94, 94) solid;
+
+
+    
+    background-color: white;
+  }
+
+  .header {
+
     display: flex;
     flex-direction: row;
-    background-color: rgba(221, 221, 221, 0.8);;
-    height: 35px;
-    padding:10px;
-    gap: 10px
+    justify-content: space-between;
+    height: 50px;
+    padding:10px 60px 10px 60px;
+    gap: 10px;
+
+    font-family: "Noto Sans", sans-serif;
+
+    z-index: 100;
+
+    flex: 1;
+    max-width: 1500px;
 
 
+    margin-right: auto;
+    margin-left: auto;
+
+    
+    
       
     }
     
@@ -27,11 +53,11 @@ body{
       float: left;
       color: black;
       text-decoration: none;
-      font-size: 16px;
       line-height: 25px;
       border-radius: 4px;
 
       text-align: center; 
+
 
 
 
@@ -42,27 +68,52 @@ body{
     }
     
     .link-div a {
-      color: rgb(252, 252, 252);
+      color: rgb(0, 0, 0);
       font-weight: 600;
+      font-size: 18px;
       transition: 0.12s;
+      letter-spacing: 1px;
+      transition: margin-right 1s, margin-left 1s ;
+      
 
     }
 
     .link-div a:hover{
-      color: rgb(255, 255, 255);
+      color: rgb(243, 243, 243);
+      margin-right: 15px;
+      margin-left: 15px;
 
     }
     .link-div:hover{
       cursor: pointer;
     }
     
+
     .header-right{
-      background-color: lightsalmon;
-      width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-wrap: nowrap;
+      margin-right: 20px;
     }
+    .header-right a{
+      font-family: "Sedgwick Ave", Arial;
+      font-size: 35px;
+      transition: 0.3s;
+      }
+
+    .header-right:hover a{
+
+      cursor: pointer;
+      color:  rgb(255, 255, 255);
+      /* text-shadow: 0px 0px 1px rgb(0, 0, 0); */
+      }
+
+
+
   
     .header-center-links{
-      background-color: lightseagreen;
       max-width: fit-content;
       flex: 1;
 
@@ -73,6 +124,9 @@ body{
       gap: clamp(0.5rem, 2vw, 4rem);
       padding: 0 clamp(0.5rem, 2vw, 5rem);
         
+
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
     }
 
     .header-left{
