@@ -34,7 +34,7 @@ h3{
 /* First section */
 
 .main-page-container{
- width: 1400px;
+ width: 80%;
  padding-top: 48px;
  /* background-color: aqua; */
 }
@@ -83,7 +83,6 @@ h3{
 /* Second section */
 
 .about-title-section{
-  width: 1400px;
   height: 60px;
   background-color: lightgoldenrodyellow;
   display: flex;
