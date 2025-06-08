@@ -16,7 +16,7 @@ body{
     left: 0;
     right: 0;
     top: 0;
-    border-bottom: 1px rgb(94, 94, 94) solid;
+    border-bottom: 1px rgb(120, 120, 120) solid;
 
 
     
@@ -79,17 +79,15 @@ body{
     }
 
     .link-div a:hover{
-      color: rgb(243, 243, 243);
+      color: rgb(60, 60, 60);
       margin-right: 15px;
       margin-left: 15px;
-
-    }
-    .link-div:hover{
       cursor: pointer;
+
     }
     
 
-    .header-right{
+    .header-logo{
       display: flex;
       align-items: center;
       justify-content: center;
@@ -97,23 +95,14 @@ body{
       text-wrap: nowrap;
       margin-right: 20px;
     }
-    .header-right a{
+    .header-logo a{
       font-family: "Sedgwick Ave", Arial;
       font-size: 35px;
       transition: 0.3s;
       }
 
-    .header-right:hover a{
-
-      cursor: pointer;
-      color:  rgb(255, 255, 255);
-      /* text-shadow: 0px 0px 1px rgb(0, 0, 0); */
-      }
-
-
-
   
-    .header-center-links{
+    .header-right-links{
       max-width: fit-content;
       flex: 1;
 
@@ -129,9 +118,5 @@ body{
 
     }
 
-    .header-left{
-      background-color:lightgreen;
-      width:200px;
-      margin-left: auto;
-    }
+
   
