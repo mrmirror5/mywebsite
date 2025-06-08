@@ -28,7 +28,7 @@ main{
 /* All the mini titles are h3 */
 
 h3{
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 /* First section */
@@ -53,7 +53,7 @@ h3{
   margin-right: 40px;
 }
 .emoji{
-  font-size: 40px;
+  font-size: 2.5rem;
   margin-bottom: 12px;
   
 }
@@ -100,7 +100,7 @@ h3{
 }
 
 .linkedin-linkki{
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   color: rgb(65, 65, 65);
   text-decoration: none;
@@ -126,14 +126,14 @@ h3{
 }
 
 .mini-subtitle{
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   color: #666;
   margin-bottom: 32px;
 }
 
 .my-story-text{
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 300;
 }
 
@@ -149,21 +149,21 @@ h3{
 }
 
 .duration-of-education{
-  font-size: 14px;
+  font-size: 0.875rem;
   color:#666;
   margin-bottom: 3px;
   font-weight: 300;
 }
 
 .provider-of-education{
-  font-size: 19px;
+  font-size: 1.1875rem;
   font-weight: 600;
   margin-bottom: 5px;
   
 }
 
 .educationJob-description{
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
 }
 
@@ -174,7 +174,7 @@ h3{
 }
 
 .provider-of-work{
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 600;
   margin-bottom: 5px;
   
@@ -237,4 +237,17 @@ input{
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;            
+}
+
+
+/* Media queries */
+
+@media (max-width: 1360px){
+  html {
+    font-size: 14px;
+  }
+  §
+  .main-page-container{
+    width: 90%;
+   }
 }
