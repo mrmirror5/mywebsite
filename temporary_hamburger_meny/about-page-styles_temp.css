@@ -1,12 +1,11 @@
 body{
   padding-bottom: 1000px;
-  padding-top: 100px;
   font-family: "Geologica", sans-serif;
 }
 
 
 main{
-  padding: 0px 60px 0px 60px;
+  padding: 100px 60px 0px 60px;
   display: flex;
   justify-content: center;
     
@@ -78,6 +77,7 @@ h3{
   /* fix this */
 
   border-radius: 10px;
+  
 }
 
 
@@ -262,6 +262,43 @@ input{
 }
 
 
+
+/* Mobile menu */
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem;
+  background-color: white;
+  position: absolute;
+  top: 100%; /* adjust based on header height */
+  right: 0;
+  left: 0;
+
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  z-index: 100;
+  
+  border-bottom: black solid 1px;
+
+
+}
+
+.menu-item {
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.33rem;
+  font-weight: 500;
+  font-family: "Noto Sans", sans-serif;
+  transition: color 0.2s;
+}
+
+.menu-item:hover {
+  color: #007bff;
+}
+
+
+
 /* Tablet */
 
 
@@ -273,4 +310,16 @@ input{
   body{
     background-color: pink;
   }
+  html {
+    font-size: 11px;
+  }
+
+  .introduction-picture{
+    display: none;
+  }
+
+  main{
+    padding: 60px 10px 0px 10px;
+  }
+
 }

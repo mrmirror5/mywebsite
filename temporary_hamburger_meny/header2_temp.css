@@ -1,0 +1,151 @@
+body{
+    margin: 0px;
+  }
+  
+
+  /* The header css 
+  /* Style the header with a grey background and some padding */
+  
+  
+  .header-container{
+    display: flex;
+    justify-content: center;
+
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: 1px rgb(120, 120, 120) solid;
+
+
+    
+    background-color: white;
+  }
+
+  .header {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding:5px 10px 5px 10px;
+    gap: 10px;
+
+    font-family: "Noto Sans", sans-serif;
+
+    z-index: 100;
+
+    flex: 1;
+    max-width: 1500px;
+
+
+    margin-right: auto;
+    margin-left: auto;
+
+    
+    
+      
+    }
+    
+    /* Style the header links */
+    .header a {
+      float: left;
+      color: black;
+      text-decoration: none;
+      line-height: 25px;
+      border-radius: 4px;
+
+      text-align: center; 
+
+
+
+
+    }
+
+    .link-div{
+      background-color: rgba(255, 150, 150, 0);
+    }
+    
+    .link-div a {
+      color: rgb(0, 0, 0);
+      font-weight: 600;
+      font-size: 1.125rem;
+      transition: 0.12s;
+      letter-spacing: 1px;
+      transition: margin-right 1s, margin-left 1s ;
+      
+
+    }
+
+    .link-div a:hover{
+      color: rgb(60, 60, 60);
+      margin-right: 15px;
+      margin-left: 15px;
+      cursor: pointer;
+
+    }
+    
+
+    .header-logo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-wrap: nowrap;
+    }
+    .header-logo a{
+      font-family: "Sedgwick Ave", Arial;
+      font-size: 1.76rem;
+      transition: 0.3s;
+      }
+
+  
+    /* .header-right-links{
+      max-width: fit-content;
+      flex: 1;
+
+      display: flex;
+      gap: 5px;  
+      align-items: center;
+
+      gap: clamp(0.5rem, 2vw, 4rem);
+      padding: 0 clamp(0.5rem, 2vw, 5rem);
+        
+
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+
+    } */
+
+
+
+
+    
+
+
+    /* Change.... + header logo margin */
+    .hamburger-menu{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      height: fit-content;
+
+      background: none;
+      border: none;
+      border-radius: 6px;
+
+      transition: background-color 0.35;
+    }
+
+    .hamburger-menu:hover{
+      background-color: rgba(192, 192, 192, 0.418);
+    }
+
+
+  
+  
+    
+  
