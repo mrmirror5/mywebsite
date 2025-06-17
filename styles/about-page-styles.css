@@ -1,12 +1,11 @@
 body{
   padding-bottom: 1000px;
-  padding-top: 100px;
   font-family: "Geologica", sans-serif;
 }
 
 
 main{
-  padding: 0px 60px 0px 60px;
+  padding: 100px 60px 0px 60px;
   display: flex;
   justify-content: center;
     
@@ -263,6 +262,10 @@ input{
 
 
 @media (max-width: 768px){
+
+  main {
+    padding: 70px 30px 0 30px;
+  }
   .introduction-picture{
     width: 120px;
     height: 120px;
