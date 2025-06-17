@@ -193,6 +193,9 @@ body{
     
   }
 
+  .nav-item a {
+    font-size: 1.3em;
+  }
   .nav-item a:hover{
   color: rgb(60, 60, 60);
   margin-right: 0;
