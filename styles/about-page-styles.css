@@ -262,15 +262,19 @@ input{
 }
 
 
-/* Tablet */
+@media (max-width: 768px){
+  .introduction-picture{
+    width: 120px;
+    height: 120px;
+    margin-top: 30px;
+    }
 
-
-
-
-/* Mobile device */
-
-@media (max-width: 400px){
-  body{
-    background-color: pink;
+  .introduction-container{
+    flex-direction: column ;
+    align-items: start;
   }
 }
+
+
+
+

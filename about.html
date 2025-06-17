@@ -28,16 +28,23 @@
       <div class="header-logo">
        <a href="about.html">Miro Armah</a>
       </div>   
-   
+      
+         <ul  class="nav-menu">
+          <div class="nav-item"> <a href="index.html">Home</a></div>
+          <div class="nav-item"><a href="portfolio.html">Portfolio</a></div>
+          <div class="nav-item"><a href="#contact">Contact</a></div>
+          <div class="nav-item"><a class="active"href="about.html">About</a></div>
+        </ul>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
     </header> 
    </div>
 
-   <ul  class="header-right-links">
-    <div class="link-div"> <a href="index.html">Home</a></div>
-    <div class="link-div"><a href="portfolio.html">Portfolio</a></div>
-    <div class="link-div"><a href="#contact">Contact</a></div>
-    <div class="link-div"><a class="active"href="about.html">About</a></div>
-  </ul>
+
    
 
 
@@ -150,4 +157,22 @@
 
    
 </body>
+
+<script>
+  const hamburger = document.querySelector(".hamburger")
+  const navMenu = document.querySelector(".nav-menu")
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}))
+
+</script>
 </html>
+

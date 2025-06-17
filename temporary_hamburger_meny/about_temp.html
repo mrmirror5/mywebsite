@@ -19,6 +19,8 @@
 </head >
 
 
+
+
 <!-- Reference site: https://www.vancedesignsproducts.com/#section-contact -->
 <body>
    
@@ -30,11 +32,14 @@
       </div>
         
 
-        <button class="hamburger-menu">
-          <svg width="24px" height="24px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"/></svg>
+        <button id="hamburger-menu-button" class="hamburger-menu">
+          <svg width="24px" height="24px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#000" d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"/>
+          </svg>
         </button>
 
-        <nav class="mobile-menu">
+
+        <nav id="mob-menu" class="mobile-menu">
           <a href="#section-hero" class="menu-item">Home</a>
           <a href="#section-work" class="menu-item">Work</a>
           <a href="#section-about" class="menu-item">About</a>
@@ -158,4 +163,41 @@
 
    
 </body>
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("hamburger-menu-button"); // ✅ updated
+    const menu = document.getElementById("mob-menu");
+
+    toggleButton.addEventListener("click", function () {
+      if (menu.classList.contains("open")) {
+        // CLOSE
+        menu.style.maxHeight = menu.scrollHeight + "px";
+        requestAnimationFrame(() => {
+          menu.style.maxHeight = "0px";
+          menu.classList.remove("open");
+        });
+      } else {
+        // OPEN
+        menu.classList.add("open");
+        menu.style.maxHeight = menu.scrollHeight + "px";
+      }
+    });
+
+    menu.addEventListener("transitionend", () => {
+      if (menu.classList.contains("open")) {
+        menu.style.maxHeight = "none";
+      }
+    });
+  });
+
+</script>
+
+
+
+
+
 </html>

@@ -3,6 +3,8 @@ body{
   }
   
 
+  
+
   /* The header css 
   /* Style the header with a grey background and some padding */
   
@@ -28,6 +30,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     height: 50px;
     padding:10px 60px 10px 60px;
     gap: 10px;
@@ -63,11 +66,11 @@ body{
 
     }
 
-    .link-div{
+    .nav-item{
       background-color: rgba(255, 150, 150, 0);
     }
     
-    .link-div a {
+    .nav-item a {
       color: rgb(0, 0, 0);
       font-weight: 600;
       font-size: 1.125rem;
@@ -78,7 +81,7 @@ body{
 
     }
 
-    .link-div a:hover{
+    .nav-item a:hover{
       color: rgb(60, 60, 60);
       margin-right: 15px;
       margin-left: 15px;
@@ -102,7 +105,7 @@ body{
       }
 
   
-    .header-right-links{
+    .nav-menu{
       max-width: fit-content;
       flex: 1;
 
@@ -119,4 +122,88 @@ body{
     }
 
 
+  /* Mobile device */
   
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+
+  .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(0, 0, 0);
+
+  }
+
+@media (max-width: 768px){
+
+  .header{
+    padding:8px 30px 8px 30px;
+  }
+  body{
+    background-color: rgb(241, 241, 241);
+
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu{
+    position: fixed;
+    
+    top: -100%;
+    left: 0;
+    right: 0;
+    gap: 0;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s;
+    background-color: rgb(255, 255, 255);    
+    max-width: none;
+    border-bottom: solid black 1px;
+    padding-bottom: 10px;
+  }
+
+  .nav-item{
+    padding: 16px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    
+  }
+
+  .nav-item a:hover{
+  color: rgb(60, 60, 60);
+  margin-right: 0;
+  margin-left: 0;
+  cursor: pointer;
+
+  }
+  .nav-menu.active{
+    top: 52px;
+
+  
+  }
+
+}
