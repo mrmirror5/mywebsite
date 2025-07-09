@@ -1,0 +1,108 @@
+:root {
+    --yellow: rgba(255, 205, 42, 0.712);
+    --white: #ffffff;
+  }
+
+  body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: rgb(131, 131, 131);
+  }
+
+
+  
+  .title-container{
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px black solid;
+    height: 90px;
+  }
+
+  .title-text {
+    font-family: 'Manufacturing Consent';
+
+  }
+
+  .title-emoji {
+    font-size: 2rem;
+  }
+
+  .title-VS {
+    font-family: "Sedgwick Ave", cursive;
+    font-weight: bold;
+    color: red;
+  }
+  .buttons-container{
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .rock-button,
+  .paper-button,
+  .scissors-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: black solid 5px;
+    font-size: 40px;
+    background-color: rgb(202, 202, 202);
+    margin-right: 20px;
+    transition: font-size 0.2s ease-out;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rock-button:hover,
+  .paper-button:hover,
+  .scissors-button:hover {
+    font-size: 20px;
+    background-color: var(--yellow);
+    margin-right: 20px;
+    
+  }
+
+  .rock-button:active,
+  .paper-button:active,
+  .scissors-button:active {
+    font-size: 50px;
+  }
+
+
+  .game-result-container{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 0;
+  }
+
+  .game-result{
+    font-size: 3rem;
+    color: var(--yellow);
+  }
+
+  .score-reset-button {
+    border: black 5px solid;
+    border-radius: 8px;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(202, 202, 202);
+  }
+
+  .score-reset-button:hover {
+    background-color: var(--yellow);
+  }
+
+  .result-history {
+    color: var(--yellow);
+    font-size: 1.5rem;
+  }
