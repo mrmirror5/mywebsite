@@ -2,3 +2,14 @@
 body {
     padding-top: 100px;
 }
+
+
+
+
+@media (max-width: 768px){ 
+    html {
+        font-size: 10px;
+    }
+
+
+}
