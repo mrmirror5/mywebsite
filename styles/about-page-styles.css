@@ -85,7 +85,6 @@ h3{
 
 .about-title-section{
   height: 60px;
-  background-color: lightgoldenrodyellow;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,16 +112,16 @@ h3{
 }
 
 .second-section-left{
-  background-color: goldenrod;
+  margin-right: 24px;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 .my-story-section{
-  flex: 1;
-  background-color: blanchedalmond;
-  padding-right: 20px;
+  
+  padding-bottom: 40px;
+  border-bottom: solid black 1px;
   
 }
 
@@ -141,7 +140,7 @@ h3{
 
 .education-section{
   flex: 1;
-  background-color: lightcyan;  
+
 }
 
 .place-of-education-container{
@@ -171,7 +170,7 @@ h3{
 /* J*b exprience section */
 .work-exprience-section{
   flex: 1;
-  background-color: lightpink;
+  margin-left: 24px;
 }
 
 .provider-of-work{
@@ -180,7 +179,9 @@ h3{
   margin-bottom: 5px;
   
 }
-
+.job-description {
+  margin-bottom: 25px;
+}
 
 
 

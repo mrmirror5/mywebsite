@@ -150,7 +150,8 @@ h3{
 
 }
 
-.duration-of-education{
+.duration-of-education,
+.duration-of-employment{
   font-size: 0.875rem;
   color:#666;
   margin-bottom: 3px;
@@ -181,8 +182,9 @@ h3{
   margin-bottom: 5px;
   
 }
-
-
+.job-description {
+  background-color: black;
+}
 
 
 
