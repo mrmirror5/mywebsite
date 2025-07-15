@@ -184,7 +184,34 @@ h3{
 }
 
 
+.job-description-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
+
+.job-description-flexible-container {
+  display: flex;
+  height: 1.35rem;
+  /* background-color: rgb(143, 207, 131); */
+  transition: height 0.5s ease-in-out;
+}
+
+.job-description-flexible-container:hover .job-description-text{
+  -webkit-line-clamp: unset;
+}
+
+.job-description-flexible-container:hover {
+  height: 6.5rem;
+}
+
+@media (max-width: 1150px) {
+  .job-description-flexible-container:hover{
+    height: 140px;
+  }
+}
 
 
 
