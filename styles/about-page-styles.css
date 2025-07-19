@@ -194,9 +194,13 @@ h3{
 
 .job-description-flexible-container {
   display: flex;
-  height: 1.35rem;
-  /* background-color: rgb(143, 207, 131); */
+  height: 1.4rem;
+  background-color: rgb(240, 240, 240);
+  border-bottom-left-radius: 10px; border-top-right-radius: 10px;
   transition: height 0.5s ease-in-out;
+  padding-left: 2px; padding-right: 2px;
+
+  position: relative;
 }
 
 .job-description-flexible-container:hover .job-description-text{
@@ -213,6 +217,12 @@ h3{
   }
 }
 
+.hover-indicator-image {
+  position: absolute;
+  top: -60px;
+  right: -95px;
+  height: 100px;
+}
 
 
  /* 
