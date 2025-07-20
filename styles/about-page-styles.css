@@ -116,12 +116,10 @@ h3{
   flex: 1;
   display: flex;
   flex-direction: column;
-  
+
 }
 
 .my-story-section{
-  
-  padding-bottom: 0px;   /*jkdshfjkhjadskljfkljdsklfjkldsajlkfjklsdajklfjaikl*/
   flex: 1;
   
 }
@@ -223,6 +221,50 @@ h3{
   top: -63px;
   right: -95px;
   height: 100px;
+}
+
+
+
+
+/* Third section ↓ */
+
+
+.third-section-content{
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  background-color: rgb(49, 179, 146);
+}
+
+.skill-box-container {
+  background-color: antiquewhite;
+  flex: 1;
+
+  display: flex;
+  gap: 20px;
+  
+}
+
+.skill-box {
+  width: 300px;
+  background-color: rgb(68, 68, 211);
+
+  padding: 30px;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.skill-paragraph {
+  padding: 15px 0 15px 0;
+  height: 104px;
+}
+
+.skill-visualizing-icons {
+  height: 25px;
+  background-color: orange;
 }
 
 
