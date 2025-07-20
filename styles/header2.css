@@ -23,6 +23,7 @@ body{
 
     
     background-color: white;
+    z-index: 100;
   }
 
   .header {

@@ -108,7 +108,7 @@ h3{
 
 .second-section-content{
   display: flex;
-  height: 1000px;
+  height: 680px;
 }
 
 .second-section-left{
@@ -116,12 +116,13 @@ h3{
   flex: 1;
   display: flex;
   flex-direction: column;
+  
 }
 
 .my-story-section{
   
-  padding-bottom: 40px;
-  border-bottom: solid black 1px;
+  padding-bottom: 0px;   /*jkdshfjkhjadskljfkljdsklfjkldsajlkfjklsdajklfjaikl*/
+  flex: 1;
   
 }
 
@@ -140,7 +141,6 @@ h3{
 
 .education-section{
   flex: 1;
-
 }
 
 .place-of-education-container{
@@ -201,6 +201,7 @@ h3{
   padding-left: 2px; padding-right: 2px;
 
   position: relative;
+  z-index: 0;
 }
 
 .job-description-flexible-container:hover .job-description-text{
@@ -219,7 +220,7 @@ h3{
 
 .hover-indicator-image {
   position: absolute;
-  top: -60px;
+  top: -63px;
   right: -95px;
   height: 100px;
 }
