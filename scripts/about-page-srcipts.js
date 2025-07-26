@@ -51,7 +51,6 @@ function wait(ms) {
 
 function handleClickCheckBox2(checkbox, event) {
     if (checkbox.checked) {
-      console.log("Checked ✅");
       document.querySelector(".skill-box-container")
       .classList.add('skill-box-container-moved');
 
