@@ -58,6 +58,20 @@ h3{
   
 }
 
+.hand-emoji {
+  transition: 1s ;
+  display: inline-block;
+}
+
+.hand-emoji:hover {
+  transform: rotate(70deg);
+}
+
+/* For movign the hand with js */
+.hand-emoji-move {
+  transform: rotate(24deg);
+}
+
 .introduction-title{
   font-size: 2.5rem;
   font-weight: 600;
@@ -112,6 +126,8 @@ h3{
   height: 680px;
   padding-bottom:90px;
 }
+
+
 
 .second-section-left{
   margin-right: 24px;
@@ -241,8 +257,15 @@ h3{
   background-color: antiquewhite;
   flex: 1;
 
+
   display: flex;
   justify-content: space-between;
+
+  transition: ease-out 1s;
+}
+
+.skill-box-container-moved { 
+  transform: translateX(-250px)
 }
 
 .skill-box {
@@ -252,6 +275,8 @@ h3{
   padding: 25px;
 
   border: solid 1px rgb(173, 173, 173);
+
+  margin-right: 20px ;
   
 }
 
@@ -275,6 +300,15 @@ h3{
 
 .skill-logo-svg {
   height: 32px;
+}
+
+.scroll-checkboxes {
+  display: flex;
+  justify-content: center;
+}
+
+.skills-scroll-box {
+  width: 14px;
 }
 
 
@@ -349,13 +383,16 @@ input{
     width: 300px;
     height: 300px;
   }
+
+
+  
 }
 
 
 @media (max-width: 768px){
 
   main {
-    padding: 70px 30px 0 30px;
+    padding: 50px 25px 0 25px;
   }
   .introduction-picture{
     width: 120px;
@@ -366,6 +403,30 @@ input{
   .introduction-container{
     flex-direction: column ;
     align-items: start;
+  }
+
+
+  /* Makes the sections go vertical */
+  .second-section-content{
+    flex-direction: column;
+    height: auto;
+  }
+  .hover-indicator-image {
+    position: absolute;
+    top: -120px;
+    right: -30px;
+    height: 100px;
+  }
+
+  .work-exprience-section{
+    margin: 50px 0 0 0;
+  }
+
+
+  /* Third section */
+
+  .skill-box-container {
+    flex-direction: column;
   }
 }
 

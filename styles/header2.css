@@ -147,10 +147,7 @@ body{
   .header{
     padding:8px 30px 8px 30px;
   }
-  body{
-    background-color: rgb(241, 241, 241);
 
-  }
 
   .hamburger {
     display: block;

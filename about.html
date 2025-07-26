@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <link rel="icon" href="fav-icons/v1_bold_linkedin-blue-bg_white.png">
+  <link rel="icon" href="fav-icons/v1_bold_blue-bg_white.png">
   <link href="styles/about-page-styles.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="styles/header2.css">
   <meta charset="UTF-8">
@@ -61,7 +61,7 @@
 
 
         <div class="emoji">
-          👋
+          <p class="js-hand-emoji hand-emoji">&#128075;</p>
         </div>
 
         <div class="introduction-title">
@@ -264,11 +264,18 @@
 
           </div>
         </div>
- 
-
-
+      
 
       </div>
+
+      
+      
+      <div class="scroll-checkboxes">
+        <input class="skills-scroll-box scroll-box-1" type="checkbox" onclick="handleClickCheckBox1(this, event)" checked>
+        <input class="skills-scroll-box scroll-box-2" type="checkbox" onclick="handleClickCheckBox2(this)">
+      </div>
+
+
     </div>
 
 
@@ -291,21 +298,6 @@
    
 </body>
 
-<script>
-  const hamburger = document.querySelector(".hamburger")
-  const navMenu = document.querySelector(".nav-menu")
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-
-})
-
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
-}))
-
-</script>
+<script src="scripts/about-page-srcipts.js"></script>
 </html>
 
