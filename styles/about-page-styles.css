@@ -242,7 +242,7 @@ h3{
   flex: 1;
 
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
 }
 
 .skill-box {
