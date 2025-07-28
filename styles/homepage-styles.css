@@ -1,6 +1,10 @@
 body{
   padding-bottom: 1000px;
   font-family: "Geologica", sans-serif;
+  display: flex;
+  justify-content: center;
+
+
 }
 
 
@@ -8,7 +12,8 @@ main{
   padding: 100px 60px 0px 60px;
   display: flex;
   justify-content: center;
-    
+  max-width: 3000px;
+  overflow-x: hidden
 }
 
 
@@ -55,6 +60,7 @@ h3{
 .emoji{
   font-size: 2.5rem;
   margin-bottom: 12px;
+  margin-right: 10px;
   
 }
 
@@ -250,6 +256,7 @@ h3{
 .third-section-content{
   display: flex;
   flex-direction: column;
+  margin-bottom: 90px;
   /* background-color: rgb(49, 179, 146); */
 }
 
@@ -328,7 +335,90 @@ h3{
   background-color: rgb(37, 128, 247);
 }
 
+/* Contact section */
 
+.contact-title-section {
+  scroll-margin-top: 100px;
+}
+
+.contact-section-content{
+  display: flex;
+  height: 180px;
+  background-color: azure;
+
+  display: flex;
+
+}
+
+.contact-content {
+  width: 900px;
+  background-color: rgb(2, 119, 2);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+
+}
+
+.contact-text {
+  margin-bottom: 50px;
+}
+
+.contact-images {
+  flex: 1;
+  background-color: antiquewhite;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-button {
+  padding: 10px 15px 10px 15px;
+  height: 60px;
+  width: 150px;
+
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+}
+
+.contact-button:hover {
+  background-color: rgb(0, 99, 230);
+
+}
+
+.contact-button:active {
+  background-color: #666a6b;
+  transition: background-color 0.1s;
+
+}
+
+.linkedin-button {
+  background-color: #0077B5;
+}
+
+
+.contact-image1 {
+  width: 150px;
+  border-radius: 15px;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.contact-image2 {
+  height: 100%;
+  
+  border-radius: 15px;
+}
  /* 
  Sign up form..-
  */ 
@@ -365,7 +455,7 @@ input{
     cursor: pointer;
     opacity: 0.9;
 }
-.sign-up-button:active {
+.sign-up-button:active{
     cursor: grab;
     background-color: rgb(88, 135, 206);
 }
@@ -380,7 +470,7 @@ input{
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;            
-}
+  }
 
 
 
