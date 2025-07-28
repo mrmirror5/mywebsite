@@ -43,13 +43,8 @@ body{
     flex: 1;
     max-width: 1500px;
 
-
     margin-right: auto;
     margin-left: auto;
-
-    
-    
-      
     }
     
     /* Style the header links */
@@ -61,10 +56,6 @@ body{
       border-radius: 4px;
 
       text-align: center; 
-
-
-
-
     }
 
     .nav-item{

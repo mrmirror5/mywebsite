@@ -44,7 +44,7 @@ function wait(ms) {
   
   loopHandMotion(); // Start the animation loop
   
-
+  
 
 
 // scroll skills funtions
