@@ -94,6 +94,7 @@ h3{
 .introduction-picture{
   height: 380px;
   width: 380px;
+  object-fit: cover;
   /* fix this */
 
   border-radius: 10px;
