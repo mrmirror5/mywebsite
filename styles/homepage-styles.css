@@ -1,5 +1,4 @@
 body{
-  padding-bottom: 1000px;
   font-family: "Geologica", sans-serif;
   display: flex;
   justify-content: center;
@@ -9,11 +8,11 @@ body{
 
 
 main{
-  padding: 100px 60px 0px 60px;
+  padding: 100px 60px 150px 60px;
   display: flex;
   justify-content: center;
   max-width: 3000px;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 
@@ -240,6 +239,12 @@ h3{
   }
 }
 
+@media (max-width: 768px) {
+  .job-description-flexible-container:hover{
+    height: 175px;
+  }
+}
+
 .hover-indicator-image {
   position: absolute;
   top: -63px;
@@ -344,15 +349,12 @@ h3{
 .contact-section-content{
   display: flex;
   height: 180px;
-  background-color: azure;
 
-  display: flex;
 
 }
 
 .contact-content {
-  width: 900px;
-  background-color: rgb(2, 119, 2);
+  width: 60%;
 
   display: flex;
   flex-direction: column;
@@ -364,12 +366,11 @@ h3{
 
 .contact-text {
   margin-bottom: 50px;
+  font-size: 1.2rem;
 }
 
 .contact-images {
   flex: 1;
-  background-color: antiquewhite;
-
   display: flex;
   justify-content: space-around;
 }
@@ -378,6 +379,7 @@ h3{
   padding: 10px 15px 10px 15px;
   height: 60px;
   width: 150px;
+  margin-right: 5px;
 
   color: white;
   background-color: black;
@@ -407,7 +409,6 @@ h3{
 
 
 .contact-image1 {
-  width: 150px;
   border-radius: 15px;
   height: 100%;
 
@@ -480,7 +481,7 @@ input{
 /* Laptop */
 @media (max-width: 1360px){
   html {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   main{
@@ -503,7 +504,9 @@ input{
 
 
 @media (max-width: 768px){
-
+  body {
+    padding-bottom: 50px;
+  }
   main {
     padding: 50px 25px 0 25px;
   }
@@ -562,9 +565,53 @@ input{
     display: none;
   }
 
+  /* Contact section */
+
+  .contact-section-content {
+    flex-direction: column;
+  }
+
+  .contact-content{
+    width: 100%;
+  }
+
+  .contact-buttons-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 50px;
+  }
+
+  .contact-button {
+    width: 100%;
+  }
+
+  .linkedin-button {
+    margin-top: 20px;
+  }
+
+  .contact-btn-linkDiv {
+    width: 100%;
+  }
+
+  .contact-images {
+    display: none;
+  }
+
+  /* .contact-image1 {
+    border-radius: 15px;
+    height: unset;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .contact-image2 {
+    height: unset;
+    
+    border-radius: 15px;
+  } */
+
 
 }
-
-
-
 
