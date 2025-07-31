@@ -12,7 +12,6 @@ main{
   display: flex;
   justify-content: center;
   max-width: 3000px;
-  overflow-x: hidden;
 }
 
 
@@ -269,6 +268,7 @@ h3{
 .skill-box-container {
   /* background-color: antiquewhite; */
   flex: 1;
+  overflow-x: hidden;
 
 
   display: flex;
@@ -476,7 +476,10 @@ input{
 
 
 
+
+  
 /* Media queries */
+
 
 
 /* Laptop */
@@ -486,7 +489,7 @@ input{
   }
 
   main{
-    padding: 100px 40px 0px 40px;
+    padding: 100px 30px 0px 30px;
   }
   .main-page-container{
     width: 90%;
@@ -495,6 +498,10 @@ input{
   .introduction-picture{
     width: 300px;
     height: 300px;
+  }
+
+  .introduction-textbox {
+    margin: 0;
   }
   .scroll-checkboxes {
     display: flex;
