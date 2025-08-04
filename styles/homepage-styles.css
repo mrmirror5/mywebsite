@@ -6,16 +6,16 @@ body{
 
 
 main{
-  padding-top: max(8%, 80px);
-  padding-right: min(7%, 60px);
-  padding-left: min(7%, 60px);
+  padding-top: max(8%, 100px);
+  padding-right: min(5%, 60px);
+  padding-left: min(5%, 60px);
   padding-bottom: min(8%, 150px) ;
   /* padding: 100px 60px 150px 60px; */
   display: flex;
   justify-content: center;
   max-width: 3000px;
 
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 
@@ -511,13 +511,15 @@ input{
 
 }
 
-
+/* mobile */
 @media (max-width: 768px){
   body {
     /* padding-bottom: 50px; */
   }
   main {
     /* padding: 50px 25px 0 25px; */
+    padding-right: min(0.5%, 60px);
+    padding-left: min(0.5%, 60px);
   }
   .introduction-picture{
     width: 120px;
@@ -543,6 +545,11 @@ input{
     height: 100px;
   }
 
+  .my-story-section{
+    margin-bottom:50px ;
+    
+  }
+
   .work-exprience-section{
     margin: 50px 0 0 0;
   }
@@ -553,7 +560,9 @@ input{
 
 
   /* Third section */
-
+  .third-section-content {
+    
+  }
   
   .osaamiseni-mini-subtitle {
     margin-bottom: 14px;
@@ -568,6 +577,8 @@ input{
     margin-top: 25px;
     width: auto;
     min-width: 200px;
+    padding-right: 20px;
+    padding-left: 20px;
     
   }
 
@@ -579,6 +590,8 @@ input{
 
   .contact-section-content {
     flex-direction: column;
+
+    height: auto;
   }
 
   .contact-content{
