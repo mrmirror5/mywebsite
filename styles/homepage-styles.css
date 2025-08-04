@@ -2,16 +2,20 @@ body{
   font-family: "Geologica", sans-serif;
   display: flex;
   justify-content: center;
-
-
 }
 
 
 main{
-  padding: 100px 60px 150px 60px;
+  padding-top: max(8%, 80px);
+  padding-right: min(7%, 60px);
+  padding-left: min(7%, 60px);
+  padding-bottom: min(8%, 150px) ;
+  /* padding: 100px 60px 150px 60px; */
   display: flex;
   justify-content: center;
   max-width: 3000px;
+
+  overflow-x: hidden;
 }
 
 
@@ -38,7 +42,7 @@ h3{
 
 .main-page-container{
  width: 80%;
- padding-top: 48px;
+ /* padding-top: 48px; */
  /* background-color: aqua; */
 }
 
@@ -263,13 +267,13 @@ h3{
   flex-direction: column;
   margin-bottom: 90px;
   /* background-color: rgb(49, 179, 146); */
+
 }
 
 .skill-box-container {
   /* background-color: antiquewhite; */
   flex: 1;
-  overflow-x: hidden;
-
+  
 
   display: flex;
   justify-content: space-between;
@@ -488,13 +492,6 @@ input{
     font-size: 13px;
   }
 
-  main{
-    padding: 100px 30px 0px 30px;
-  }
-  .main-page-container{
-    width: 90%;
-   }
-
   .introduction-picture{
     width: 300px;
     height: 300px;
@@ -506,17 +503,21 @@ input{
   .scroll-checkboxes {
     display: flex;
   }
-
   
+  .third-section-content {
+    overflow-x: visible ;
+  }
+
+
 }
 
 
 @media (max-width: 768px){
   body {
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
   }
   main {
-    padding: 50px 25px 0 25px;
+    /* padding: 50px 25px 0 25px; */
   }
   .introduction-picture{
     width: 120px;
@@ -553,13 +554,13 @@ input{
 
   /* Third section */
 
+  
   .osaamiseni-mini-subtitle {
     margin-bottom: 14px;
   }
   .skill-box-container {
     flex-direction: column;
     align-items: center;
-    
   }
 
   .skill-box {
@@ -567,6 +568,7 @@ input{
     margin-top: 25px;
     width: auto;
     min-width: 200px;
+    
   }
 
   .scroll-checkboxes {

@@ -76,3 +76,22 @@ function handleClickCheckBox2(checkbox, event) {
         event.preventDefault();
     }
   }
+
+// When skill scroller is moved and screen size gets so big that it's no longer needed it tends to stuck, this fixes it.
+
+
+const skillBoxContainer = document.querySelector('.skill-box-container');
+const scrollCheckboxes = document.querySelector('.scroll-checkboxes');
+
+
+
+window.addEventListener("resize", () => {
+  if (skillBoxContainer.classList.contains('skill-box-container-moved') && skillBoxContainer.classList.contains('skill-box-container-moved') && window.getComputedStyle(scrollCheckboxes).display === "none") {
+      document.querySelector(".skill-box-container")
+          .classList.remove('skill-box-container-moved');
+
+      // force resets the scroll checkboxes
+      document.querySelector('.scroll-box-2').checked = false; 
+      document.querySelector('.scroll-box-1').checked = true;
+    }
+});
