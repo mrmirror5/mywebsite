@@ -278,7 +278,7 @@ h3{
   display: flex;
   justify-content: space-between;
 
-  transition: ease-out 0.3s;
+  transition: ease-out 0.2s;
 
   margin-bottom: 25px;
 }
