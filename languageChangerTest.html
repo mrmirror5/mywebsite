@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAng</title>
+
+
+    <style>
+        .selector-border {
+            border: solid red 3px;
+            display: inline-block;
+            border-radius: 15px;
+        }
+
+        .radio-selector1 {
+            color: blueviolet
+        }
+
+
+
+        .language-select {
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .language {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            background-color: hsla(120, 92%, 29%, 0.747);
+        }
+
+        .language:hover {
+            background-color: hsla(120, 92%, 29%, 0.884);
+        }
+
+
+        .dropdown-menu .content {
+            position: absolute;
+            opacity: 0;
+            transition: 0.15s;
+        }
+
+        .dropdown-menu:hover .content{
+            opacity: 1;
+        }
+
+        .dropdown-menu{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="selector-border">
+    <input class="radio-selector1" type="radio" name="moi" id="1">
+    <input class="radio-selector2" type="radio" name="moi" id="2">
+    <input class="radio-selector3" type="radio" name="moi" id="2">
+</div>
+
+
+<div class="dropdown-menu">
+    <button class="language-select">
+        Language
+    </button>
+    
+    <div class="content">
+        <a href="" class="language">Suomi</a>
+        <a href="" class="language">Suomi</a>
+        <a href="" class="language">Suomi</a>
+    </div>
+</div>
+
+</body>
+</html>
