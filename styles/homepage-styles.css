@@ -328,8 +328,8 @@ h3{
 
 .skills-scroll-box {
   appearance: none;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   background-color: rgb(216, 216, 216);
   padding: 0;
   border-radius: 10px;
@@ -497,9 +497,6 @@ input{
     height: 300px;
   }
 
-  .introduction-textbox {
-    margin: 0;
-  }
   .scroll-checkboxes {
     display: flex;
   }
