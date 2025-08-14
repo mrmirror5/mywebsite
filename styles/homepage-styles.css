@@ -229,22 +229,26 @@ h3{
   z-index: 0;
 }
 
-.job-description-flexible-container:hover .job-description-text{
+.job-description-flexible-container:hover .job-description-text,
+.job-description-flexible-container-active .job-description-text{
   -webkit-line-clamp: unset;
 }
 
-.job-description-flexible-container:hover {
+.job-description-flexible-container:hover,
+.job-description-flexible-container-active {
   height: 6.5rem;
 }
 
 @media (max-width: 1150px) {
-  .job-description-flexible-container:hover{
+  .job-description-flexible-container:hover,
+  .job-description-flexible-container-active{
     height: 140px;
   }
 }
 
 @media (max-width: 768px) {
-  .job-description-flexible-container:hover{
+  .job-description-flexible-container:hover,
+  .job-description-flexible-container-active{
     height: 175px;
   }
 }
@@ -254,6 +258,7 @@ h3{
   top: -63px;
   right: -95px;
   height: 100px;
+  pointer-events: none;
 }
 
 
@@ -395,6 +400,8 @@ h3{
   cursor: pointer;
   transition: background-color 0.3s;
 
+  transition: transform 0.65s;
+
 }
 
 .contact-button:hover {
@@ -405,7 +412,7 @@ h3{
 .contact-button:active {
   background-color: #666a6b;
   transition: background-color 0.1s;
-
+  transform:translateY(-5px)
 }
 
 .linkedin-button {
