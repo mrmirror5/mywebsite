@@ -262,7 +262,7 @@ h3{
   .job-description-flexible-container.job-description-flexible-container-active{
     height: 175px;
   }
-}
+
 
 .hover-indicator-image {
   position: absolute;
@@ -272,7 +272,7 @@ h3{
   pointer-events: none;
 }
 
-
+}
 
 
 /* Third section ↓ */

@@ -109,11 +109,9 @@ if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
   jobDescriptionElements.forEach((jobDescriptionBox, index) => {
     jobDescriptionBox.addEventListener('click', (event) => {
       timesClicked ++;
-      document.querySelector('.introduction-title').innerHTML = 'clicked'+timesClicked;
+      document.querySelector('.introduction-title').innerHTML = 'clicked'+time;
 
-      jobDescriptionBox.classList.remove('job-description-flexible-container-active');
-      void jobDescriptionBox.offsetWidth; // force reflow
-      jobDescriptionBox.classList.toggle('job-description-flexible-container-active');
+      event.currentTarget.classList.toggle('job-description-flexible-container-active');
     });
   });
 }
