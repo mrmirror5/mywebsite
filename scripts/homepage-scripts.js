@@ -103,14 +103,10 @@ window.addEventListener("resize", () => {
 
 const jobDescriptionElements = document.querySelectorAll('.job-description-flexible-container');
 
-timesClicked = 0;
 
 if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
   jobDescriptionElements.forEach((jobDescriptionBox, index) => {
     jobDescriptionBox.addEventListener('click', (event) => {
-      timesClicked ++;
-      document.querySelector('.introduction-title').innerHTML = 'clicked'+time;
-
       event.currentTarget.classList.toggle('job-description-flexible-container-active');
     });
   });
