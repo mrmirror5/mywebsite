@@ -247,7 +247,7 @@ h3{
 }
 
 @media (max-width: 768px) {
-  .job-description-flexible-container:hover,
+  /* .job-description-flexible-container:hover, */
   .job-description-flexible-container-active{
     height: 175px;
   }

@@ -103,7 +103,7 @@ window.addEventListener("resize", () => {
 
 const jobDescriptionElements = document.querySelectorAll('.job-description-flexible-container');
 
-if (window.matchMedia('(hover:none)').matches) {
+if (window.matchMedia('(hover: none)').matches) {
 
   jobDescriptionElements.forEach((jobDescriptionBox) => {
     jobDescriptionBox.addEventListener('click', (event) => {
@@ -111,4 +111,3 @@ if (window.matchMedia('(hover:none)').matches) {
     });
   });
 }
-  
