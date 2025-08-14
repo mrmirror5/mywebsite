@@ -229,25 +229,25 @@ h3{
   z-index: 0;
 }
 
-.job-description-flexible-container:hover .job-description-text,
+/* .job-description-flexible-container:hover .job-description-text, */
 .job-description-flexible-container-active .job-description-text{
   -webkit-line-clamp: unset;
 }
 
-.job-description-flexible-container:hover,
+/* .job-description-flexible-container:hover, */
 .job-description-flexible-container-active {
   height: 6.5rem;
 }
 
 @media (max-width: 1150px) {
-  .job-description-flexible-container:hover,
+  /* .job-description-flexible-container:hover, */
   .job-description-flexible-container-active{
     height: 140px;
   }
 }
 
 @media (max-width: 768px) {
-  .job-description-flexible-container:hover,
+  /* .job-description-flexible-container:hover, */
   .job-description-flexible-container-active{
     height: 175px;
   }
