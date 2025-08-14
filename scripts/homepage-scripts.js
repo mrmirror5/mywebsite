@@ -103,7 +103,7 @@ window.addEventListener("resize", () => {
 
 const jobDescriptionElements = document.querySelectorAll('.job-description-flexible-container');
 
-if (true) {
+if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
 
   jobDescriptionElements.forEach((jobDescriptionBox) => {
     jobDescriptionBox.addEventListener('click', (event) => {
@@ -112,4 +112,3 @@ if (true) {
   });
 }
 
-// window.matchMedia('(hover: none)').matches
