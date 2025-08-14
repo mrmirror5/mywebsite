@@ -111,7 +111,9 @@ if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
       timesClicked ++;
       document.querySelector('.introduction-title').innerHTML = 'clicked'+timesClicked;
 
-      event.currentTarget.classList.toggle('job-description-flexible-container-active');
+      jobDescriptionBox.classList.remove('job-description-flexible-container-active');
+      void jobDescriptionBox.offsetWidth; // force reflow
+      jobDescriptionBox.classList.toggle('job-description-flexible-container-active');
     });
   });
 }
