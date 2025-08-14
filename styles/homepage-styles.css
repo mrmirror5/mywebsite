@@ -219,10 +219,11 @@ h3{
 
 .job-description-flexible-container {
   display: flex;
-  height: 1.4rem;
+  min-height: 1.4rem;
+  max-height: 1.4rem;
   background-color: rgb(240, 240, 240);
   border-bottom-left-radius: 10px; border-top-right-radius: 10px;
-  transition: height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
   padding-left: 2px; padding-right: 2px;
 
   position: relative;
@@ -235,32 +236,32 @@ h3{
 }
 
 .job-description-flexible-container:hover{
-  height: 6.5rem;
+  max-height: 6.5rem;
 }
 
 .job-description-flexible-container.job-description-flexible-container-active{
-  height: 6.5rem;
+  max-height: 6.5rem;
 }
 
 
 @media (max-width: 1150px) {
   .job-description-flexible-container:hover {
-    height: 140px;
+    max-height: 140px;
   }
   
   .job-description-flexible-container.job-description-flexible-container-active{
-    height: 140px;
+    max-height: 140px;
   }
 }
 
 
 @media (max-width: 768px) {
   .job-description-flexible-container:hover {
-    height: 175px;
+    max-height: 175px;
   }
   
   .job-description-flexible-container.job-description-flexible-container-active{
-    height: 175px;
+    max-height: 175px;
   }
 }
 
