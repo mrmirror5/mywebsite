@@ -95,3 +95,20 @@ window.addEventListener("resize", () => {
       document.querySelector('.scroll-box-1').checked = true;
     }
 });
+
+
+
+
+// Job description flexible container on mobile
+
+const jobDescriptionElements = document.querySelectorAll('.job-description-flexible-container');
+
+
+if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+  jobDescriptionElements.forEach((jobDescriptionBox, index) => {
+    jobDescriptionBox.addEventListener('click', (event) => {
+      event.currentTarget.classList.toggle('job-description-flexible-container-active');
+    });
+  });
+}
+
