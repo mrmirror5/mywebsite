@@ -9,7 +9,15 @@ const inputBox = document.getElementById("input-box");
 
 //Make Add button addTask
 const addButton = document.getElementById("add-button");
-addButton.addEventListener("click", addTask);
+addButton.addEventListener("click", function() {
+        readSavedList();
+        // Adds to list
+        addTask();
+        // save to local storage
+        saveTaskList();
+        // print
+        printTasks();
+});
 
 //Make enter addTask
 document.getElementById("input-box").addEventListener("keypress", function(e){
