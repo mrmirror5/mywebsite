@@ -1,0 +1,198 @@
+body{
+    margin: 0px;
+  }
+  
+
+  
+
+  /* The header css 
+  /* Style the header with a grey background and some padding */
+  
+  
+  .header-container{
+    display: flex;
+    justify-content: center;
+
+
+    
+    border-bottom: 1px rgb(120, 120, 120) solid;
+
+
+    
+    background-color: white;
+    z-index: 100;
+  }
+
+  .header {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding:10px 60px 10px 60px;
+    gap: 10px;
+
+    font-family: "Noto Sans", sans-serif;
+
+    z-index: 100;
+
+    flex: 1;
+    max-width: 1500px;
+
+    margin-right: auto;
+    margin-left: auto;
+    }
+    
+    /* Style the header links */
+    .header a {
+      float: left;
+      color: black;
+      text-decoration: none;
+      line-height: 25px;
+      border-radius: 4px;
+
+      text-align: center; 
+    }
+
+    .nav-item{
+      background-color: rgba(255, 150, 150, 0);
+    }
+    
+    .nav-item a {
+      color: rgb(0, 0, 0);
+      font-weight: 600;
+      font-size: 1.125rem;
+      transition: 0.12s;
+      letter-spacing: 1px;
+      transition: margin-right 1s, margin-left 1s ;
+      
+
+    }
+
+    .nav-item a:hover{
+      color: rgb(60, 60, 60);
+      margin-right: 15px;
+      margin-left: 15px;
+      cursor: pointer;
+
+    }
+    
+
+    .header-logo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-wrap: nowrap;
+      margin-right: 20px;
+    }
+    .header-logo a{
+      font-family: "Sedgwick Ave", Arial;
+      font-size: 2.1875rem;
+      transition: 0.3s;
+      }
+
+  
+    .nav-menu{
+      max-width: fit-content;
+      flex: 1;
+
+      display: flex;
+      gap: 5px;  
+      align-items: center;
+
+      gap: clamp(0.5rem, 2vw, 4rem);
+      padding: 0 clamp(0.5rem, 2vw, 5rem);
+        
+
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+    }
+
+
+  /* Mobile device */
+  
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+
+  .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(0, 0, 0);
+
+  }
+
+@media (max-width: 768px){
+
+  .header{
+    padding:8px 30px 8px 30px;
+  }
+
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu{
+    position: fixed;
+    
+    top: -100%;
+    left: 0;
+    right: 0;
+    gap: 0;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s;
+    background-color: rgb(255, 255, 255);    
+    max-width: none;
+    border-bottom: solid black 1px;
+    padding-bottom: 10px;
+  }
+
+  .nav-item{
+    padding: 16px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    
+  }
+
+  .nav-item a {
+    font-size: 1.3em;
+  }
+  .nav-item a:hover{
+  color: rgb(60, 60, 60);
+  margin-right: 0;
+  margin-left: 0;
+  cursor: pointer;
+
+  }
+  .nav-menu.active{
+    top: 52px;
+
+  
+  }
+
+}

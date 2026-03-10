@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="icon" href="../fav-icons/v1_bold_blue-bg_white.png">
+    <link rel="stylesheet" href="todoListStyles.css">
+    <link rel="stylesheet" href="header.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+
+
+
+    <audio id="task-done-audio">
+        <source src="audio/jobs_done.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="task-not-done-audio">
+        <source src="audio/sound-fail-fallo.mp3" type="audio/mpeg">
+    </audio>
+</head>
+<body>
+    
+    <div class="header-container">
+    <header class="header">
+      <div class="header-logo">
+       <a href="index.html">Miro Armah</a>
+      </div>   
+      
+         <ul  class="nav-menu">
+          <div class="nav-item"> <a href="../index.html">Home</a></div>
+          <div class="nav-item"><a href="../portfolio.html">Portfolio</a></div>
+          <div class="nav-item"><a class="active"href="/todo-list">Todo List</a></div>
+          <div class="nav-item"><a href="#contact">Contact</a></div>
+        </ul>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+    </header> 
+   </div>
+
+
+    <div class="head-box">TODO List</div>
+    <div class="add-field">
+        <input type="text" placeholder="Type a task..." id="input-box" class="input-box">
+        <button class="add-button" id="add-button">Add</button>
+    </div>
+    <div class="task-bucket" id="task-bucket">
+        
+        <div class="task-body">
+            <div class="task">
+                <p>Task text here</p>
+            </div>
+            <div class="basic-button rm-button">
+                Remove
+            </div>
+            <div class="basic-button done-button">
+                Done
+            </div>       
+        </div>
+
+    </div>
+
+    <script src="todoListScript.js"></script>
+    
+</body>
+</html>
