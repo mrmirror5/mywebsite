@@ -505,7 +505,7 @@ input{
 
 
 /* Laptop */
-@media (max-width: 1360px){
+@media (max-width: 1440px){
   html {
     font-size: 13px;
   }
