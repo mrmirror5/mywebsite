@@ -102,8 +102,12 @@ function printTasks(){
             document.getElementById("task-done-audio").play();
 
             // Remove from local storage, save and print
-            doneList.push((todoList.splice(i,1))[0])
-            localStorage.setItem("doneTasksSaved", JSON.stringify(doneList))
+            const doneTasksSaved = localStorage.getItem("doneTasksSaved");
+            if (doneTasksSaved) {
+                doneTasks = JSON.parse(doneTasksSaved);
+            } 
+            doneTasks.push((todoList.splice(i,1))[0])
+            localStorage.setItem("doneTasksSaved", JSON.stringify(doneTasks))
             printDoneTasks()
 
             saveTaskList()
@@ -158,9 +162,10 @@ function printDoneTasks(){
     } 
     console.log(doneTasksPrint)
 
-
-    const ul = document.getElementById("done-list");
     
+    const ul = document.getElementById("done-list");
+    ul.innerHTML = ""
+
     doneTasksPrint.forEach((task) => {
         const li = document.createElement("li");
         li.innerHTML = task;
