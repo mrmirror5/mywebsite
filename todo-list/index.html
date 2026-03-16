@@ -7,6 +7,7 @@
     <link rel="icon" href="../fav-icons/v1_bold_blue-bg_white.png">
     <link rel="stylesheet" href="todoListStyles.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="tabSelectorStyles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,26 +47,54 @@
 
 
     <div class="head-box">TODO List</div>
-    <div class="add-field">
-        <input type="text" placeholder="Type a task..." id="input-box" class="input-box">
-        <button class="add-button" id="add-button">Add</button>
-    </div>
-    <div class="task-bucket" id="task-bucket">
-        
-        <div class="task-body">
-            <div class="task">
-                <p>Task text here</p>
+    <div class="main-body">
+
+        <div class="main-field">
+    
+            <div class="add-field">
+                <input type="text" placeholder="Type a task..." id="input-box" class="input-box">
+                <button class="add-button" id="add-button">Add</button>
             </div>
-            <div class="basic-button rm-button">
-                Remove
+            <div class="task-bucket" id="task-bucket">
+                
+                <div class="task-body">
+                    <div class="task">
+                        <p>Task text here</p>
+                    </div>
+                    <div class="basic-button rm-button">
+                        Remove
+                    </div>
+                    <div class="basic-button done-button">
+                        Done
+                    </div>       
+                </div>
             </div>
-            <div class="basic-button done-button">
-                Add
-            </div>       
+
+
         </div>
 
+        <div class="extra-field">
+            <div class="selector">
+                <ul id="nav-tab" class="nav">
+                    <li class="active"><a href="#description">Description</a></li>
+                    <li><a href="#tasksDone">Tasks Done</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="tab-pane active" id="description">
+                    <h4>Description page</h4> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iure quos cum, saepe reprehenderit minima quasi architecto numquam nesciunt dicta. Qui excepturi recusandae vitae maiores, inventore sequi? Rerum, odio omnis.</p> 
+                 </div>
+                <div class="tab-pane" id="tasksDone">
+                    <h4>tasks Done page</h4> 
+                    <ul id="done-list">
+                        <!-- Already done tasks will appear here, by the js. -->
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-
+    
     <script src="todoListScript.js"></script>
     
         <script>

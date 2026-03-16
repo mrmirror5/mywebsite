@@ -1,0 +1,56 @@
+/* Inspiration https://codepen.io/webcrunchblog/pen/YOZQXP */
+
+ul.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  
+  
+  li {
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+
+    border: black solid 4px;
+
+    background-color: rgba(192, 12, 177, 0.593);
+    flex: 1;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+
+    &:hover {
+        background-color: rgba(191, 29, 177, 0.593);
+    }
+    
+    a {
+      pointer-events: none;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-weight: 600;
+      padding: 10px;
+      font-size: 1.4rem;
+      transition: all .3s ease-in-out;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        color: gray;
+      }
+    }
+  }
+}
+
+.tab-pane { 
+  display: none;
+}
+
+.tab-pane.active { 
+  display: block; 
+}
+
+ul.nav li.active {
+  background-color: rgb(204, 143, 213);
+}

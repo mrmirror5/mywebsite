@@ -1,9 +1,10 @@
 //Todo list structure
 let todoList = [];
-
+let doneList = [];
 // Print tasks from local storage on refresh
 readSavedList();
-printTasks()
+printTasks();
+printDoneTasks();
 
 const inputBox = document.getElementById("input-box");
 
@@ -101,10 +102,69 @@ function printTasks(){
             document.getElementById("task-done-audio").play();
 
             // Remove from local storage, save and print
-            todoList.splice(i,1)
+            doneList.push((todoList.splice(i,1))[0])
+            localStorage.setItem("doneTasksSaved", JSON.stringify(doneList))
+            printDoneTasks()
+
             saveTaskList()
             printTasks()
         });
         taskBucket.appendChild(taskBody);
     }
 }
+
+
+
+
+
+
+
+// The side bar section
+
+
+function onTabClick(event) {
+
+    // Deactive existing active tab and panel
+    let activeTabs = document.querySelectorAll(".active");
+
+    activeTabs.forEach(function(tab) {
+        tab.className = tab.className.replace("active", "");
+    })
+
+    // Activate new tab and panel
+    event.target.className += " active";    
+
+    document.getElementById(event.target.firstChild.href.split("#")[1]).className += " active";
+
+}
+
+
+const element = document.getElementById('nav-tab');
+
+element.addEventListener("click", onTabClick, false);
+
+
+
+
+
+// Tasks done printing
+
+function printDoneTasks(){
+    // Load done tasks from memory
+    const doneTasksSaved = localStorage.getItem("doneTasksSaved");
+    let doneTasksPrint = [];
+    if (doneTasksSaved) {
+        doneTasksPrint = JSON.parse(doneTasksSaved);
+    } 
+    console.log(doneTasksPrint)
+
+
+    const ul = document.getElementById("done-list");
+    
+    doneTasksPrint.forEach((task) => {
+        const li = document.createElement("li");
+        li.innerHTML = task;
+        ul.appendChild(li);
+    });
+};
+    
