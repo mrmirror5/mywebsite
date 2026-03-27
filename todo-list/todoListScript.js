@@ -113,6 +113,25 @@ function printTasks(){
             saveTaskList()
             printTasks()
         });
+
+        const task = taskBody;
+        
+        //Make the first task selected automatically.
+        if (i==0) {
+            task.classList.add("task-selected");
+        }
+
+        // Just selecting the task-selected class for now.
+        task.addEventListener("click", () => {
+            const alreadySelected = document.querySelector(".task-selected");
+            console.log(alreadySelected)
+            if (alreadySelected) {
+                alreadySelected.classList.remove("task-selected");
+            }
+            // What to do when task selected
+            task.classList.add("task-selected");
+        })
+
         taskBucket.appendChild(taskBody);
     }
 }
