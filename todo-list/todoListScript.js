@@ -1,6 +1,6 @@
 //Todo list structure
 let todoList = [];
-let doneList = [];
+let doneTasks = [];
 // Print tasks from local storage on refresh
 readSavedList();
 printTasks();
@@ -173,3 +173,8 @@ function printDoneTasks(){
     });
 };
     
+
+function clearDoneTasks(){
+    localStorage.removeItem("doneTasksSaved");
+    printDoneTasks();
+}

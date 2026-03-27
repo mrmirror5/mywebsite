@@ -1,5 +1,16 @@
 /* Inspiration https://codepen.io/webcrunchblog/pen/YOZQXP */
 
+:root {
+  --text: #060d07;
+  --background: #f7fcf8;
+  --primary: #44c953;
+  --secondary: #86e691;
+  --accent: #5ce96c;
+
+}
+
+
+
 ul.nav {
   list-style: none;
   padding: 0;
@@ -17,14 +28,14 @@ ul.nav {
 
     border: black solid 4px;
 
-    background-color: rgba(192, 12, 177, 0.593);
+    background-color: var(--secondary);
     flex: 1;
     border-radius: 10px;
     cursor: pointer;
     transition: all .15s ease-in-out;
 
     &:hover {
-        background-color: rgba(191, 29, 177, 0.593);
+      filter: brightness(0.95);
     }
     
     a {
@@ -33,7 +44,7 @@ ul.nav {
       color: rgb(0, 0, 0);
       font-weight: 600;
       padding: 10px;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       transition: all .3s ease-in-out;
       border-bottom: 1px solid transparent;
       &:hover {
@@ -42,6 +53,12 @@ ul.nav {
     }
   }
 }
+
+.side-page-title {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+} 
 
 .tab-pane { 
   display: none;
@@ -52,5 +69,11 @@ ul.nav {
 }
 
 ul.nav li.active {
-  background-color: rgb(204, 143, 213);
+  background-color: var(--primary);
+}
+
+
+.tab-pane {
+  padding-left: 10px;
+  padding-right: 10px;
 }
