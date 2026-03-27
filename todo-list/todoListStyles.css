@@ -225,5 +225,9 @@ input:focus {
         height: 50px;
         width: 100%;
     }
+    
+    .extra-field {
+        display: none;
+    }
 
 }
