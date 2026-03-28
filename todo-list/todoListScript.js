@@ -1,4 +1,5 @@
-//Todo list structure
+//Todo list structure, 
+//let todoList = [{task:"clean", taskDescription:"Tidy up the garage", taskDate: new Date()}]
 let todoList = [];
 let doneTasks = [];
 // Print tasks from local storage on refresh
@@ -6,7 +7,7 @@ readSavedList();
 printTasks();
 printDoneTasks();
 
-const inputBox = document.getElementById("input-box");
+
 
 //Make Add button addTask
 const addButton = document.getElementById("add-button");
@@ -27,27 +28,54 @@ document.getElementById("input-box").addEventListener("keypress", function(e){
         readSavedList();
         // Adds to list
         addTask();
+        
         // save to local storage
         saveTaskList();
         // print
         printTasks();
+    }
+})
 
+// Make enter add task on description box also
+document.getElementById("description-box").addEventListener("keypress", function(e){
+    if (e.key === "Enter") {
+        e.preventDefault();      // stop newline
+        readSavedList();
+        // Adds to list
+        addTask();
+        // save to local storage
+        saveTaskList();
+        // print
+        printTasks();
     }
 })
 
 
 
 
-
-
 function addTask(){
-    const taskString = document.getElementById("input-box").value;
+    const inputBox = document.getElementById("input-box");
+    const descriptionBox = document.getElementById("description-box");
+    //Create task object with the time.
+    let taskObject = {task:"", taskDescription:"", taskDate: new Date()}
+
     if(inputBox.value === ""){
         alert("You must write something!");
     }
-    else{
-        todoList.push(taskString);
+    else if (descriptionBox === ""){
+        taskObject.task = inputBox.value;
+        todoList.push(taskObject);
+
+        //Clear the box value
         inputBox.value = "";
+    }
+    else {
+        taskObject.task = inputBox.value;
+        taskObject.taskDescription = descriptionBox.value;
+        todoList.push(taskObject);
+        // Clear the boxes
+        inputBox.value = "";
+        descriptionBox.value = "";
     }
 }
 
@@ -66,6 +94,7 @@ function readSavedList(){
     } else {
         todoList = [];
     }
+    console.log(todoList)
 }
 
 function printTasks(){
@@ -78,10 +107,24 @@ function printTasks(){
         const taskBody = document.createElement("div");
         taskBody.classList.add("task-body");
 
+        // Get the date and time
+        const d = new Date(todoList[i].taskDate);
+        hours = String(d.getHours()).padStart(2, "0"); // make it 15:02 instead of 15:2
+        minutes = String(d.getMinutes()).padStart(2,"0");
+        date = d.getDate();
+        month = d.getMonth()+1;
+        year = d.getFullYear();
+
+
         taskBody.innerHTML = `
             <div class="task">
-                <p>${todoList[i]}</p>
+                <p>${todoList[i].task}</p>      
             </div>
+            <div class="task-date-section">
+                <p class="task-time">${hours}:${minutes}</p>
+                <p class="task-date">${date}.${month}.${year}</p>
+            </div>
+
             <div class="basic-button rm-button">Remove</div>
             <div class="basic-button done-button">Done</div>
         `;
@@ -115,21 +158,24 @@ function printTasks(){
         });
 
         const task = taskBody;
-        
+    
         //Make the first task selected automatically.
         if (i==0) {
             task.classList.add("task-selected");
+            printDescriptionPage(todoList[i].taskDescription)
         }
 
         // Just selecting the task-selected class for now.
         task.addEventListener("click", () => {
             const alreadySelected = document.querySelector(".task-selected");
-            console.log(alreadySelected)
             if (alreadySelected) {
                 alreadySelected.classList.remove("task-selected");
             }
             // What to do when task selected
             task.classList.add("task-selected");
+
+            // Print the desription
+            printDescriptionPage(todoList[i].taskDescription)
         })
 
         taskBucket.appendChild(taskBody);
@@ -179,15 +225,23 @@ function printDoneTasks(){
     if (doneTasksSaved) {
         doneTasksPrint = JSON.parse(doneTasksSaved);
     } 
-    console.log(doneTasksPrint)
 
     
     const ul = document.getElementById("done-list");
     ul.innerHTML = ""
 
-    doneTasksPrint.forEach((task) => {
+    doneTasksPrint.forEach((taskDetails) => {
         const li = document.createElement("li");
-        li.innerHTML = task;
+        li.innerHTML = taskDetails.task;
+        
+        //Check for description and display it, here in the Done Tasks section
+        if (taskDetails.taskDescription !== "") {
+            const ul2 = document.createElement("ul");
+            const li2 = document.createElement("li");
+            li2.innerHTML = taskDetails.taskDescription;
+            ul2.appendChild(li2)
+            li.appendChild(ul2)
+        }
         ul.appendChild(li);
     });
 };
@@ -196,4 +250,20 @@ function printDoneTasks(){
 function clearDoneTasks(){
     localStorage.removeItem("doneTasksSaved");
     printDoneTasks();
+}
+
+
+
+// Description page
+
+function printDescriptionPage(descriptionText){
+    descriptionElement = document.getElementById("description-element");
+    if (descriptionText){
+        descriptionElement.innerHTML = descriptionText;
+    }
+    else {
+        console.log("This task has no description.")
+        descriptionElement.innerHTML = "This task has no description.";
+    }
+    
 }
