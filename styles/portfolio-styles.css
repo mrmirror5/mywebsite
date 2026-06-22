@@ -4,5 +4,37 @@ body {
 }
 
 
+.project-link {
+  display: inline-block;
+  padding: 14px 22px;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
 
+.project-link:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.35);
+}
 
+.project-link:active {
+  transform: scale(0.97);
+}
+
+.project-link::after {
+  content: "→";
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover::after {
+  transform: translateX(5px);
+}
