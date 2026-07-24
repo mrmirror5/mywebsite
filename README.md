@@ -1,1 +1,1 @@
-This is my first own website. I mainly train building a website on this site. On the side I'm making a little "blog".
+This is the repo for my personal website incluiding my portfolio, cv and much more to come. Stay tuned.
