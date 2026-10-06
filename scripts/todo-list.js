@@ -31,6 +31,13 @@ const projectsArray = [{
     description: "A simple to-do-list app that is made with React and utilizes the Mantine UI library for styling.",
     link: "https://mrmirror5.github.io/react-todo-app/",
     img: "images/project-snapshots/TodoV2.png"
+},
+{
+    name: "Flipsi - Flashcard app",
+    description: "A minimal non-bloated flashcard app with a glamorous UI and a possibility to create, study and publish decks.",
+    link: "https://flipsi.app",
+    img: "images/project-snapshots/flipsi-ss.png"
+
 }
 ]
 
